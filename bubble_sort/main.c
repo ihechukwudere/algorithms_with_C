@@ -2,7 +2,7 @@
 
 int main(int argc, char const *argv[])
 {
-    int A[] = {3, 5, 2, 6, 8, 0, 9, 8, 4, 7};
+    int A[] = {3, 5, 2, 6, 8, 0, 9, 1, 4, 7};
     int len = 10;
 
     // outer loop: controls the number of passes through the array
@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
         {
             // Sorts in ascending order
             //The less than (<) operator could be changed for sort in descending order.
-            if(A[j] > A[j + 1])
+            if(A[j] < A[j + 1])
             {
                 int temp = A[j];
                 A[j] = A[j + 1];
