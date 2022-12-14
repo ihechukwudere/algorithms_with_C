@@ -1,11 +1,21 @@
 #include <stdio.h>
 
+void bubble_sort(int A[], int len);
+
 int main(int argc, char const *argv[])
 {
     int A[] = {3, 5, 2, 6, 8, 0, 9, 1, 4, 7};
     int len = 10;
+    bubble_sort(A, len);
+    // Print array elements
+    for (size_t i = 0; i < len; i++)
+        printf("A[%zu] = %d\n", i, A[i]);
+    return 0;
+}
 
-    // outer loop: controls the number of passes through the array
+void bubble_sort(int A[], int len)
+{
+   // outer loop: controls the number of passes through the array
     for (size_t i = 0; i < len; i++)
     {
         // Inner loop: does the passes it and swaps the element
@@ -21,12 +31,5 @@ int main(int argc, char const *argv[])
             }
         }
         
-    }
-
-    // Print array elements
-    for (size_t i = 0; i < len; i++)
-        printf("A[%zu] = %d\n", i, A[i]);
-    
-    
-    return 0;
+    } 
 }
